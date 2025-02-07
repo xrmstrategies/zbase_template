@@ -1,0 +1,315 @@
+html[dir="rtl"] {
+	@if map-get($user_layout_vars,'header_style') == 01 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						.theme-mobile-header-search{
+							&.theme-mobile-header-search-open{
+								.theme-search-field-container{
+									transform: translateX(0%) scale(1);
+								}
+							}
+							@media (max-width: 991px){
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					@media (max-width: 991px){
+						transform: translate(100%, 0);
+						&.active{
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					.theme-mobile-header-sortby{
+						&::after{
+							transform: rotate(45deg);
+						}
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 02 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						@media (max-width: 991px){
+							.theme-mobile-header-search{
+								&.theme-mobile-header-search-open{
+									.theme-search-field-container{
+										transform: translateX(0%) scale(1);
+									}
+								}
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					@media (max-width: 991px){
+						transform: translate(100%, 0);
+						&.active{
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 03 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						@media (max-width: 991px){
+							.theme-mobile-header-search{
+								&.theme-mobile-header-search-open{
+									.theme-search-field-container{
+										transform: translateX(0%) scale(1);
+									}
+								}
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					@media (max-width: 991px){
+						transform: translate(100%, 0);
+						&.active{
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 04 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						@media (max-width: 991px){
+							.theme-mobile-header-search{
+								&.theme-mobile-header-search-open{
+									.theme-search-field-container{
+										transform: translateX(0%) scale(1);
+									}
+								}
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					transform: translate(100%, 0);
+					&.active{
+						transform: translate(0, 0);
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 05 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						.theme-mobile-header-search{
+							&.theme-mobile-header-search-open{
+								.theme-search-field-container{
+									transform: translateX(0%) scale(1);
+								}
+							}
+							.theme-search-field-container{
+								transform: translateX(-100%) scale(0);
+								.theme-mobile-header-search-back{
+									a{
+										svg {
+											transform: rotate(-180deg);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					transform: translate(100%, 0);
+					&.active{
+						transform: translate(0, 0);
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 06 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						@media (max-width: 991px){
+							.theme-mobile-header-search{
+								&.theme-mobile-header-search-open{
+									.theme-search-field-container{
+										transform: translateX(0%) scale(1);
+									}
+								}
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					@media (max-width: 991px){
+						transform: translate(100%, 0);
+						&.active{
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media (max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+					}
+				}
+			}
+		}
+	}
+	@if map-get($user_layout_vars,'header_style') == 07 {
+		/** Header Style **/
+		@if map-get($user_layout_vars,'mobile_header_style') == 03 {
+
+			.theme-mobile-header-style-03{
+				&.theme-mobile-header-top{
+					.theme-mobile-header-nav-wrapper{
+						@media(max-width: 991px){
+							.theme-mobile-header-search{
+								&.theme-mobile-header-search-open{
+									.theme-search-field-container{
+										transform: translateX(0%) scale(1);
+									}
+								}
+								.theme-search-field-container{
+									transform: translateX(-100%) scale(0);
+									.theme-mobile-header-search-back{
+										a{
+											svg {
+												transform: rotate(-180deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.theme-mobile-header-slidewrapper{
+					@media(max-width: 991px){
+						transform: translate(100%, 0);
+						&.active{
+							transform: translate(0, 0);
+						}
+					}
+				}
+			}
+			.theme-mobile-header-refine-wrapper{
+				@media(max-width: 991px){
+					&.hide-refine-wrapper{
+						transform: translateY(100%);
+						transition: transform ease 0.15s;
+					}
+				}
+			}
+		}
+	}
+}

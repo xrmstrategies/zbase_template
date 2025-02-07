@@ -1,0 +1,21 @@
+<div class="theme-search-and-mini-cart-group {% if portal_position == "02" && (page.template_vars.header_style == "01" || page.template_vars.header_style == "04" || page.template_vars.header_style == "05") %}theme-portal-position-02{% endif %}" data-theme-search-cart-group="zptheme-search-cart-group">
+
+    {% comment %} SEARCH STARTS {% endcomment %}
+
+    {% if page.is_search_enabled %}
+      {% include '_search-box' %}
+    {% endif %}
+
+    {% comment %} SEARCH ENDS {% endcomment %}
+
+    {% comment %} PORTAL STARTS {% endcomment %}
+
+    {% if portal_position == "02" && page.portal_page_type ==0 %}
+      <div data-theme-portal-non-responsive="zptheme-portal-non-responsive" class="theme-nonresponsive-portal-position-two {% if page.template_vars.header_style == "06" && page.portal_page_type != 0 %}theme-hide-res-topbar {% endif %}">
+        {% include '_member-portal' %}
+      </div>
+    {% endif %}
+
+    {% comment %} PORTAL ENDS {% endcomment %}
+    
+</div>

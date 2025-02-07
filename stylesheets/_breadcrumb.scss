@@ -1,0 +1,404 @@
+@if map-get($user_layout_vars,'breadcrumb_style') == 01 {
+
+  .theme-breadcrumb-container{
+    + .zpdark-section{
+      margin-block-start:50px;
+    }
+    + .zplight-section{
+      margin-block-start:50px;
+    }
+    &.theme-section{
+      padding-block-end:0px;
+    }
+    .theme-breadcrumb{
+      @include flexbox;
+      @include prefix(align-items,center);
+      @include prefix(flex-wrap,wrap);
+      svg{
+        height:14px;
+        width:14px;
+        fill:map-get($default_vars, 'color-breadcrumb-text');
+      }
+      .theme-breadcrumb-nav{
+        font-size:map-get($default_vars, 'font-size-breadcrumb');
+        color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        padding-block-start:10px;
+        padding-block-end:10px;
+        padding-inline-start:13px;
+        padding-inline-end:13px;
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(flex-wrap,wrap);
+        background:map-get($default_vars, 'color-breadcrumb-background');
+         &:first-child{
+           @include prefix(align-self,stretch);
+        }
+        &:hover{
+          color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        }
+        &.theme-last-breadcrumb-nav{
+          background:map-get($default_vars, 'color-breadcrumb-hov-active-background');
+          color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          svg{
+            fill:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+          }
+          &:hover{
+            color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          }
+        }
+        &:last-child{
+          padding-inline-end:13px;
+          &:after{
+            display: none;
+          }
+        }
+        &:hover{
+          svg{
+            fill:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+          }
+        }
+      }
+      .theme-breadcrumb-divider{
+        cursor: default;
+        background:map-get($default_vars, 'color-breadcrumb-background');
+        color:map-get($default_vars, 'color-breadcrumb-text');
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(align-self,stretch);
+        &:last-of-type{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 02 {
+
+  .theme-product-page-breadcrumb {
+    @include flexbox;
+    @include prefix(align-items,center);
+    padding-block-start:50px;
+    padding-block-end:0px;
+    padding-inline-start:0px;
+    padding-inline-end:0px;
+    &.theme-breadcrumb-bottom-space{
+      padding-block-end:50px;
+    }
+    .theme-porduct-bredcrumb {
+      @include inline-flex;
+      @include prefix(flex-direction,row);
+      @include prefix(align-items,center);
+      .breadcrumb-home-icon{
+        @include flexbox;
+        svg{
+          width: 20px;
+          height: 20px;
+          fill:map-get($base_vars,'color-primary');
+        }
+        span{
+          padding-block-start:0px;
+          padding-block-end:0px;
+          padding-inline-start:10px;
+          padding-inline-end:0px;
+        }
+      }
+      a {
+        color:map-get($base_vars,'color-primary');
+        &:hover{
+          color:map-get($default_vars,'color-breadcrumb-hov-active-text-icon');
+        }
+      }
+      .theme-last-breadcrumb-nav {
+        color:RGBA(map-get($default_vars,'color-text-rgba'),0.8);
+        &:hover{
+          color:RGBA(map-get($default_vars,'color-text-rgba'),0.8);
+        }
+      }
+      svg {
+        margin-inline-start:10px;
+        margin-inline-end:10px;
+        height:15px;
+        width:15px;
+        fill:map-get($base_vars,'color-text');
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 03 {
+  .theme-breadcrumb-container{
+    + .zpdark-section{
+      margin-block-start:50px;
+    }
+    + .zplight-section{
+      margin-block-start:50px;
+    }
+    &.theme-section{
+      padding-block-end:0px;
+    }
+    .theme-breadcrumb{
+      @include flexbox;
+      @include prefix(align-items,center);
+      @include prefix(flex-wrap,wrap);
+      .theme-breadcrumb-nav{
+        font-size:map-get($default_vars, 'font-size-breadcrumb');
+        color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        margin-block-start:10px;
+        margin-block-end:10px;
+        margin-inline-start:13px;
+        margin-inline-end:13px;
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(flex-wrap,wrap);
+        background:map-get($default_vars, 'color-breadcrumb-background-style-03');
+         &:first-child{
+           @include prefix(align-self,stretch);
+           margin-inline-start:0px;
+        }
+        &:hover{
+          color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        }
+        &.theme-last-breadcrumb-nav{
+          color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          &:hover{
+            color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          }
+        }
+        &:last-child{
+          padding-inline-end:13px;
+          &:after{
+            display: none;
+          }
+        }
+      }
+      .theme-breadcrumb-divider{
+        cursor: default;
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(align-self,stretch);
+        svg{
+          g{
+            fill:map-get($default_vars, 'color-breadcrumb-text');
+          }
+        }
+        &:last-of-type{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 04 {
+  .theme-breadcrumb-container{
+    + .zpdark-section{
+      margin-block-start:50px;
+    }
+    + .zplight-section{
+      margin-block-start:50px;
+    }
+    &.theme-section{
+      padding-block-end:0px;
+    }
+    .theme-breadcrumb{
+      @include flexbox;
+      @include prefix(align-items,center);
+      @include prefix(flex-wrap,wrap);
+      .theme-breadcrumb-nav{
+        font-size:map-get($default_vars, 'font-size-breadcrumb');
+        color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        padding-block-start:10px;
+        padding-block-end:10px;
+        padding-inline-start:13px;
+        padding-inline-end:13px;
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(flex-wrap,wrap);
+        background:map-get($default_vars, 'color-breadcrumb-background-style-04');
+         &:first-child{
+           @include prefix(align-self,stretch);
+           padding-inline-start:0px;
+        }
+        &:hover{
+          color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+        }
+        &.theme-last-breadcrumb-nav{
+          color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          &:hover{
+            color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+          }
+        }
+        &:last-child{
+          padding-inline-end:13px;
+          &:after{
+            display: none;
+          }
+        }
+      }
+      .theme-breadcrumb-divider{
+        cursor: default;
+        @include flexbox;
+        @include prefix(align-items,center);
+        @include prefix(align-self,stretch);
+        svg{
+          g{
+            fill:map-get($default_vars, 'color-breadcrumb-text');
+          }
+        }
+        &:last-of-type{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 05 {
+  .theme-breadcrumb-container {
+      + .zpdark-section{
+        margin-block-start:50px;
+      }
+      + .zplight-section{
+        margin-block-start:50px;
+      }
+      &.theme-section{
+        padding-block-end:0px;
+      }
+      .theme-porduct-breadcrumb {
+          @include flexbox;
+          @include prefix(flex-wrap,wrap);
+          @include prefix(align-items,center);
+
+          a {
+              @include inline-flex;
+              color: map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+              &:hover {
+                color: map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+              }
+          }
+          .theme-breadcrumb-active {
+            color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+            &:hover {
+              color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+            }
+          }
+          span {
+              color: map-get($base_vars, 'color-text');
+              margin-block-start:0px;
+              margin-block-end:0px;
+              margin-inline-start:10px;
+              margin-inline-end:10px;
+              display: inline-block;
+
+              &:last-of-type {
+                  display: none;
+              }
+          }
+      }
+  }
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 06 {
+  .theme-breadcrumb-container {
+      + .zpdark-section{
+        margin-block-start:50px;
+      }
+      + .zplight-section{
+        margin-block-start:50px;
+      }
+      &.theme-section{
+        padding-block-end:0px;
+      }
+      .theme-porduct-breadcrumb {
+          @include inline-flex;
+          @include prefix(flex-wrap,wrap);
+          @include prefix(align-items,center);
+          a {
+              color:map-get($base_vars, 'color-primary');
+              &:hover {
+                  color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+              }
+          }
+          .theme-breadcrumb-active {
+            color:RGBA(map-get($default_vars, 'color-secondary-rgba'),0.8);
+            &:hover {
+              color:RGBA(map-get($default_vars, 'color-secondary-rgba'),0.8);
+            }
+          }
+          span {
+              color: map-get($base_vars, 'color-secondary');
+              display: inline-block;
+              margin-block-start:0px;
+              margin-block-end:0px;
+              margin-inline-start:6px;
+              margin-inline-end:6px;
+              &:last-of-type {
+                  display: none;
+              }
+          }
+      }
+  }
+}
+
+@if map-get($user_layout_vars,'breadcrumb_style') == 07 {
+  .theme-breadcrumb-container{
+      + .zpdark-section{
+        margin-block-start:50px;
+      }
+      + .zplight-section{
+        margin-block-start:50px;
+      }
+      &.theme-section{
+        padding-block-end:0px;
+      }
+      .theme-breadcrumb {
+          @include inline-flex;
+          @include prefix(flex-wrap,wrap);
+          @include prefix(align-items,center);
+          a {
+              color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+              font-size:map-get($default_vars, 'font-size-breadcrumb');
+              &:hover {
+                color:map-get($default_vars, 'color-breadcrumb-hov-active-text-icon');
+              }
+          }
+          .theme-breadcrumb-active {
+            color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+            &:hover {
+              color:RGBA(map-get($default_vars, 'color-breadcrumb-text-rgba'),0.8);
+            }
+          }
+          span {
+              color: map-get($default_vars, 'color-breadcrumb-text');
+              display: inline-block;
+              margin-block-start:0px;
+              margin-block-end:0px;
+              margin-inline-start:6px;
+              margin-inline-end:6px;
+              &:last-of-type {
+                  display: none;
+              }
+          }
+      }
+  }
+}
+
+// FULL STRETCH
+
+.theme-pages-full-stretch{
+  .zpcontainer{
+    @include respond-to(mediumdevice){
+      width: 100%;
+      max-inline-size:1440px;
+      padding-inline-start:50px;
+      padding-inline-end:50px;
+    }
+  }
+}
+
+// FULL STRETCH END

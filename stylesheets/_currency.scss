@@ -1,0 +1,349 @@
+// STYLE FOR CURRENCY OPTION
+
+.theme-currency-hide-overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 285;
+  display: none;
+}
+
+.theme-currency-option-container{
+  height: 23px;
+  cursor: pointer;
+  position: relative;
+  ul{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    z-index: 300;
+    position: relative;
+    li{
+      list-style: none;
+      margin: 0;
+      padding-block-start:5px;
+      padding-block-end:5px;
+      padding-inline-start:10px;
+      padding-inline-end:10px;
+      position: relative;
+      @include prefix(align-items,center);
+      display: none;
+      font-family: map-get($default_vars,'font-family-currency-option');
+      font-size: map-get($default_vars,'font-size-currency-option');
+      font-weight: map-get($default_vars,'font-weight-currency-option');
+      text-transform: map-get($default_vars,'font-transform-currency-option');
+      color : map-get($default_vars,'color-currency-option');
+      line-height: map-get($default_vars,'font-line-height-currency-option');
+      letter-spacing: map-get($default_vars,'font-letter-spacing-currency-option');
+      &:hover{
+        background: map-get($default_vars,'color-currency-hover-background');
+      }
+      img{
+        margin-inline-end:5px;
+        height: 15px;
+        vertical-align: bottom;
+      }
+      &:first-child{
+        @include flexbox;
+        @include prefix(align-items,center);
+        background: transparent;
+        padding-block-start:0;
+        padding-block-end:0;
+        padding-inline-start:10px;
+        padding-inline-end:0;
+        &:after{
+          content: "";
+          display: inline-block;
+          height: 0px;
+          width: 0px;
+          border-width: 4px;
+          border-style: solid;
+          border-color : map-get($default_vars,'color-currency-option') transparent transparent transparent;
+          z-index: 2;
+          margin-block-start:2px;
+          margin-block-end:0;
+          margin-inline-start:auto;
+          margin-inline-end:5px;
+        }
+      }
+    }
+    &.theme-currency-open{
+      background: map-get($default_vars,'color-currency-background');
+      @include prefix(box-shadow,0 0 20px RGBA(map-get($default_vars,'color-currency-shadow-rgba'),0.2));
+      li{
+        font-size: map-get($default_vars,'font-size-currency-option');
+        &:hover{
+          color : map-get($default_vars,'color-currency-option-hover');
+        }
+        &:first-child{
+          &:after{
+            border-color : transparent transparent map-get($default_vars,'color-currency-option') transparent;
+            @include prefix(transform,translate(0,-50%));
+          }
+        }
+      }
+    }
+  }
+  &.theme-currency-style-02{
+    ul {
+      @include respond-to(mediumdevice){
+        background: transparent;
+      }
+      @include prefix(box-shadow,none);
+      &.theme-currency-open{
+        li{
+          background: map-get($default_vars,'color-currency-background');
+          @include prefix(box-shadow,0 10px 14px RGBA(map-get($default_vars,'color-currency-shadow-rgba'),0.1));
+          &:hover{
+            color : map-get($default_vars,'color-currency-option-hover');
+          }
+          &:first-child{
+            padding-block-end:3px;
+            background: transparent;
+            @include prefix(box-shadow,none);
+            border-block-end:0 none;
+            @include respond-to(mediumdevice){
+              border-block-end: 3px solid map-get($default_vars,'color-currency-decorate-border');
+            }
+            &:hover{
+              color : map-get($default_vars,'color-currency-option');
+            }
+          }
+        }
+      }
+    }
+  }
+  &.theme-currency-style-03{
+    ul {
+      @include respond-to(mediumdevice){
+        background: transparent;
+      }
+      @include prefix(box-shadow,none);
+      &.theme-currency-open{
+        li{
+          background: map-get($default_vars,'color-currency-background');
+          @include prefix(box-shadow,0 10px 14px RGBA(map-get($default_vars,'color-currency-shadow-rgba'),0.1));
+          border-inline-start: 1px solid map-get($default_vars,'color-currency-option-border');
+          border-inline-end: 1px solid map-get($default_vars,'color-currency-option-border');
+          &:hover{
+            color : map-get($default_vars,'color-currency-option-hover');
+          }
+          &:last-child{
+            border-block-end:0 none;
+            @include respond-to(mediumdevice){
+              border-block-end: 1px solid map-get($default_vars,'color-currency-option-border');
+            }
+          }
+          &:nth-child(2){
+            border-block-start: 1px solid map-get($default_vars,'color-currency-option-border');
+          }
+          &:first-child{
+            padding-block-end: 3px;
+            background: transparent;
+            border: 0 none;
+            @include prefix(box-shadow,none);
+            &:hover{
+              color : map-get($default_vars,'color-currency-option');
+            }
+          }
+        }
+      }
+    }
+  }
+  .theme-currency-label{
+    display: block;
+    @include respond-to(mediumdevice){
+      display: none;
+    }
+  }
+}
+.theme-close-mobile-currency{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 350;
+  display: none;
+  padding-block-start:20px;
+  padding-block-end:20px;
+  padding-inline-start:28px;
+  padding-inline-end:28px;
+  opacity: 1;
+  font-size: 16px;
+  color: map-get($default_vars,'color-currency-option');
+  width: 100%;
+  .theme-currency-open-label{
+    margin-inline-end:auto;
+  }
+  .theme-currency-close-icon-container{
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: relative;
+    &:after,
+    &:before{
+      background: map-get($default_vars,'color-mobile-burger-icon');
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      @include prefix(transform,rotate(-45deg));
+      top: 10px;
+    }
+    &:before{
+      @include prefix(transform,rotate(45deg));
+    }
+  }
+  @include respond-to(mediumdevice){
+    display: none;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.theme-currency-non-res{
+  margin-inline-start:auto;
+  margin-inline-end:0px;
+  &.theme-curency-option-left-space{
+    @include respond-to(mediumdevice){
+      margin-inline-start:13px;
+      padding-inline-start:8px;
+      border-inline-start:1px dotted map-get($default_vars, 'color-currency-option');
+    }
+  }
+  display: none;
+  @include respond-to(mediumdevice){
+    display: block;
+    width: 60px;
+    height: 23px;
+  }
+}
+.theme-vertical-navigation-container{
+  .theme-currency-option-container{
+    @include respond-to(mediumdevice){
+      margin-inline-end:15px;
+    }
+  }
+  &.theme-currency-enable-vertical{
+    .theme-header-topbar{
+      .theme-portal-login{
+        .theme-portal-container{
+          .theme-portal-content{
+            a{
+              .theme-portal-username{
+                max-inline-size:70px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .theme-header{
+      .zpcontainer{
+        .theme-vertical-navigation-portal{
+          .theme-portal-login{
+            .theme-portal-container{
+              padding-block-start:0px;
+              padding-block-end:0px;
+              padding-inline-start:30px;
+              padding-inline-end:30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.theme-currency-container-style-05-non-res{
+  margin-inline-start:auto;
+  &.theme-curency-option-left-space{
+    margin-inline-start:auto;
+    @include respond-to(mediumdevice){
+      margin-inline-start:13px;
+      padding-inline-start:8px;
+      border-inline-start:1px dotted map-get($default_vars, 'color-currency-option');
+    }
+  }
+  @include respond-to(mediumdevice){
+    height: 23px;
+    width: 60px;
+  }
+}
+.theme-currency-container-style-06-non-res{
+  margin-inline-start:auto;
+  @include respond-to(mediumdevice){
+    height: 23px;
+    width: 60px;
+    margin-inline-end:15px;
+  }
+}
+.theme-currency-container-style-06-res{
+  margin-inline-start:20px;
+}
+.zpdark-header-portion{
+  .theme-currency-non-res{
+    &.theme-curency-option-left-space{
+      @include respond-to(mediumdevice){
+        border-inline-start:1px dotted map-get($default_vars,'darkbg-color-currency-option');
+      }
+    }
+  }
+  .theme-currency-option-container{
+    ul{
+      li{
+        &:first-child{
+          color: map-get($default_vars,'darkbg-color-currency-option');
+          &:after{
+            @include respond-to(mediumdevice){
+              border-color: map-get($default_vars,'darkbg-color-currency-option') transparent transparent transparent;
+            }
+          }
+        }
+      }
+      &.theme-currency-open{
+        li{
+          &:first-child{
+            color: map-get($default_vars,'color-currency-option');
+            &:after{
+              border-color: transparent transparent map-get($default_vars,'color-currency-option') transparent;
+            }
+          }
+        }
+      }
+    }
+    &.theme-currency-style-02,
+    &.theme-currency-style-03{
+      ul{
+        &.theme-currency-open{
+          li{
+            &:first-child{
+              @include respond-to(mediumdevice){
+                color: map-get($default_vars,'darkbg-color-currency-option');
+              }
+              &:after{
+                @include respond-to(mediumdevice){
+                  border-color: transparent transparent map-get($default_vars,'darkbg-color-currency-option') transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .theme-currency-container-style-05-non-res{
+    &.theme-curency-option-left-space{
+      @include respond-to(mediumdevice){
+        border-inline-start:1px dotted map-get($default_vars, 'darkbg-color-currency-option');
+      }
+    }
+  }
+}
+@media all and (max-width:991px){
+  .theme-currency-container-style-05-res{
+    margin-inline-start:auto;
+  }
+}
+
+// STYLE FOR CURRENCY OPTION END

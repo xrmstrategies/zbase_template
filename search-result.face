@@ -1,0 +1,36 @@
+<div class="theme-searchresult-container">
+    <h1>{{ i18n.get('search.content.result.title', search_results.search_query) }}</h1>
+    <div class="theme-searchresult">
+        <div class="theme-searchresult-content">
+            {% assign results = search_results.search_results %}
+            {% if results | length==0 %}
+            	{{ search_results.no_results_message }}
+            {% else %}
+            {% for result in results %}
+            <a class="theme-searchresult-heading" href="{{ result.resource_path }}" title="{{ result.resource_name }}">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9.077 0a2.5 2.5 0 011.902.877l2.923 3.425a2.5 2.5 0 01.598 1.623V13.5A2.5 2.5 0 0112 16H4a2.5 2.5 0 01-2.5-2.5v-11A2.5 2.5 0 014 0zM9 1H4a1.5 1.5 0 00-1.5 1.5v11A1.5 1.5 0 004 15h8a1.5 1.5 0 001.5-1.5V6h-3a1.5 1.5 0 01-1.493-1.356L9 4.5V1zm0 9.615a.5.5 0 01.09.992l-.09.008H5.154a.5.5 0 01-.09-.992l.09-.008H9zm0-2.769a.5.5 0 01.09.992L9 8.846H5.154a.5.5 0 01-.09-.992l.09-.008H9zm1-6.528V4.5a.5.5 0 00.41.492L10.5 5h2.679l-.038-.049-2.923-3.425A1.5 1.5 0 0010 1.318z" fill="#00376E" fill-rule="nonzero"></path></svg>
+                <div class="theme-searchresult-row">
+                    <h6>{{ result.resource_name }}</h6>
+                    <span class="theme-searchresult-url">{{ result.full_path }}</span>
+                </div>
+            </a>
+            <p>
+             	{{ result.summary }}
+            </p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    {% if search_results.show_pagination %}
+    <div class="theme-searchresult-pagination">
+        {% for page_number in search_results.page_numbers %}
+        <a href="/search?q={{ search_results.search_query }}&page_number={{ page_number }}" {% if search_results.curr_page_number==page_number %} class="is-selected" {% endif %}>{{ page_number }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+<div class="theme-loader" data-theme-loader>
+  <span>
+    {{i18n.get("search.wait.message")}} . . .
+  </span>
+</div>

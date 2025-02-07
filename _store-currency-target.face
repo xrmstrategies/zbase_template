@@ -1,0 +1,5 @@
+{% if page.is_multi_currency_enabled %}
+  <div tabindex="0" aria-label="{{i18n.get('common.currencies')}}" role="button" aria-expanded="false" aria-haspopup="true" class="theme-currency-option-container theme-currency-style-{{page.template_vars.store_currency_style}}" data-theme-currency-list-container data-zs-currency-list>
+  </div>
+  <div class="theme-currency-hide-overlay" data-theme-currency-hide-overlay onclick="hideCurrency()"></div>
+{% endif %}

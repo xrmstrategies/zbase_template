@@ -1,0 +1,25 @@
+<div data-theme-portal="zptheme-portal" class="theme-portal-login {% if page.template_vars.header_style == "04" && page.is_social_icon_enabled && !page.template_vars.is_social_icon_floater_enabled || page.template_vars.header_style == "05" && page.is_social_icon_enabled && !page.template_vars.is_social_icon_floater_enabled || page.template_vars.header_style == "05" && page.is_contact_information_enabled %}theme-portal-space{% endif %} {% if portal_position == "02" %}theme-portal-icon-enabled{% endif %}" {% if portal_position == "02" %} tabindex="0" aria-label="{{i18n.get('common.member_portal')}}" {% endif %}>
+  {% if portal_position == "02" %}
+  <svg class="theme-portal-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 27" aria-hidden="true"><path fill-rule="evenodd" d="M19 7c0 3.87-3.13 7-7 7s-7-3.13-7-7 3.13-7 7-7 7 3.13 7 7Zm-2 0c0 2.76-2.24 5-5 5S7 9.76 7 7s2.24-5 5-5 5 2.24 5 5Zm7 19c0-6.08-4.92-11-11-11h-2C4.92 15 0 19.92 0 26c0 .55.45 1 1 1h22c.55 0 1-.45 1-1ZM2.06 25c.51-4.55 4.36-8 8.94-8h2c4.58 0 8.43 3.45 8.94 8H2.06Z"/ aria-hidden="true"></svg>
+  <div class="theme-portal-container-dropdown">
+  {% endif %}
+    <div class="theme-portal-container" data-portal-loggedout style="display:block">
+      <div class="theme-portal-content"> <a data-portal-signin href="javascript:;" aria-label="{{ i18n.get("portal.signin") }}">{{ i18n.get("portal.signin") }}</a> </div>
+      {% if page.is_portal_signup_enabled %}
+        <div class="theme-portal-content"> <a data-portal-signup href="javascript:void(0)" aria-label="{{ i18n.get("portal.signup") }}">{{ i18n.get("portal.signup") }}</a> </div>
+      {% endif %}
+    </div>
+    <div class="theme-portal-container" data-portal-loggedin style="display:none">
+      <div class="theme-portal-content theme-portal-content-loggedin-site">
+        <a href="javascript:;" data-portal-profile title="{{i18n.get('common.profile')}}">
+          <span class="theme-portal-username" data-portal-user-name></span>
+        </a>
+      </div>
+      <div class="theme-portal-content">
+        <a data-portal-logout href="javascript:void(0)" aria-label="{{ i18n.get("portal.signout") }}">{{ i18n.get("portal.signout") }}</a>
+      </div>
+    </div>
+  {% if portal_position == "02" %}
+  </div>
+  {% endif %}
+</div>

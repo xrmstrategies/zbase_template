@@ -1,0 +1,17 @@
+html[dir="rtl"] {
+	.theme-header-topbar {
+		.theme-portal-login{
+			.theme-portal-container{
+				.theme-portal-content{
+					&.theme-portal-username-content{
+						.theme-user-name-dropdown {
+							.theme-user-profile-down-arrow {
+								transform: rotate(-135deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

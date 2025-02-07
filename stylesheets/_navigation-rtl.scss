@@ -1,0 +1,265 @@
+html[dir="rtl"] {
+
+	// SUBMENU STYLES
+
+	@if map-get($user_layout_vars,'submenu_style') == 01 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-down-arrow,
+						&.theme-submenu-up-arrow{
+							@include respond-to(mediumdevice) {
+								transform: rotate(-135deg);
+							}
+						}
+					}
+					ul{
+						li{
+							ul{
+								li{
+									a{
+										.theme-sub-li-menu{
+											transform:rotate(-45deg) translate(0, -50%);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.theme-responsive-menu-area{
+			&.theme-navigation-and-icons {
+				.theme-menu-area {
+					.theme-menu {
+						.theme-sub-li-menu {
+							&.theme-submenu-down-arrow,
+							&.theme-submenu-up-arrow {
+								transform:rotate(0deg);
+								&:after {
+									transform:rotate(-135deg);
+								}
+							}
+							&.theme-submenu-up-arrow {
+								&:after {
+									transform:rotate(45deg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@if map-get($user_layout_vars,'submenu_style') == 02 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-down-arrow,
+						&.theme-submenu-up-arrow{
+							@include respond-to(mediumdevice) {
+								transform: rotate(-135deg);
+							}
+						}
+					}
+					ul{
+						li{
+							ul{
+								li{
+									a{
+										.theme-sub-li-menu{
+											transform:rotate(-45deg) translate(0, -50%);
+										}
+									}
+								}
+								&.theme-sub-menu-position-change{
+									li{
+										&:first-child{
+											&:after{
+												transform: rotate(45deg);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.theme-responsive-menu-area{
+			&.theme-navigation-and-icons {
+				.theme-menu-area {
+					.theme-menu {
+						.theme-sub-li-menu {
+							&.theme-submenu-down-arrow,
+							&.theme-submenu-up-arrow {
+								transform:rotate(0deg);
+								&:after {
+									transform:rotate(-135deg);
+								}
+							}
+							&.theme-submenu-up-arrow {
+								&:after {
+									transform:rotate(45deg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@if map-get($user_layout_vars,'submenu_style') == 03 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-right-arrow{
+							transform:rotate(-45deg) translate(0, -50%);
+						}
+					&.theme-submenu-down-arrow,
+					&.theme-submenu-up-arrow{
+						@include respond-to(mediumdevice) {
+							transform: rotate(-135deg);
+						}
+					}
+
+					}
+				}
+			}
+		}
+	}
+
+	@if map-get($user_layout_vars,'submenu_style') == 04 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-down-arrow,
+						&.theme-submenu-up-arrow{
+							transform: rotate(-135deg);
+						}
+					}
+					ul{
+						li{
+							ul{
+								li{
+									a{
+										.theme-sub-li-menu{
+											@include respond-to(mediumdevice){
+												transform:rotate(-45deg) translate(0, -50%);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.theme-responsive-menu-area{
+			&.theme-navigation-and-icons {
+				.theme-menu-area {
+					.theme-menu {
+						.theme-sub-li-menu {
+							&.theme-submenu-down-arrow,
+							&.theme-submenu-up-arrow {
+								transform:rotate(0deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@if map-get($user_layout_vars,'submenu_style') == 05 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-down-arrow,
+						&.theme-submenu-up-arrow{
+							@include respond-to(mediumdevice) {
+								@include prefix(transform,rotate(-135deg));
+							}
+						}
+						&.theme-submenu-right-arrow{
+									transform:rotate(-45deg) translate(0, -50%);
+						}
+					}
+				}
+			}
+		}
+
+		.theme-responsive-menu-area{
+			&.theme-navigation-and-icons {
+				.theme-menu-area {
+					.theme-menu {
+						.theme-sub-li-menu {
+							&.theme-submenu-down-arrow,
+							&.theme-submenu-up-arrow {
+								&:after {
+									transform:rotate(-135deg);
+								}
+							}
+							&.theme-submenu-up-arrow {
+								&:after {
+									transform:rotate(45deg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+  	@if map-get($user_layout_vars,'submenu_style') == 06 {
+		.theme-navigation-and-icons{
+			.theme-menu-area{
+				.theme-menu{
+					.theme-sub-li-menu{
+						&.theme-submenu-down-arrow,
+						&.theme-submenu-up-arrow{
+							@include prefix(transform,rotate(-135deg));
+						}
+						&.theme-submenu-right-arrow{
+							transform:rotate(-45deg) translate(0, -50%);
+						}
+					}
+				}
+			}
+		}
+		.theme-responsive-menu-area{
+			&.theme-navigation-and-icons {
+				.theme-menu-area {
+					.theme-menu {
+						.theme-sub-li-menu {
+							&.theme-submenu-down-arrow,
+							&.theme-submenu-up-arrow {
+								transform:rotate(0deg);
+								&:after {
+									transform:rotate(-135deg);
+								}
+							}
+							&.theme-submenu-up-arrow {
+								&:after {
+									transform:rotate(45deg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
